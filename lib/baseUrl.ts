@@ -1,10 +1,14 @@
 export function getBaseUrl() {
-  // Prefer your custom domain (set in Vercel env)
-  if (process.env.NEXT_PUBLIC_SITE_URL) return process.env.NEXT_PUBLIC_SITE_URL;
+  // In browser, relative is fine
+  if (typeof window !== "undefined") return "";
 
-  // Vercel provides VERCEL_URL (no protocol)
+  // Vercel provides this automatically
   if (process.env.VERCEL_URL) return `https://${process.env.VERCEL_URL}`;
 
-  // Local dev fallback
+  // Custom domain (if you set it later)
+  if (process.env.NEXT_PUBLIC_SITE_URL) return process.env.NEXT_PUBLIC_SITE_URL;
+
+  // Local fallback
   return "http://127.0.0.1:3000";
 }
+
