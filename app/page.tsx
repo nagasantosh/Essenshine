@@ -66,11 +66,7 @@ export default async function HomePage() {
         <div className="rounded-2xl border border-[hsl(var(--border))] bg-[hsl(var(--surface))] px-5 py-3">
           <div className="flex flex-wrap items-center justify-between gap-3 text-sm">
             <div className="text-[hsl(var(--muted))]">
-              From Hyderabad • Premium herbal rituals for hair & skin
-              <span className="mx-2 text-[hsl(var(--gold))]">•</span>
-              <span className="text-[hsl(var(--text))] font-medium">
-                Secure checkout & fast dispatch
-              </span>
+              Premium herbal rituals for hair & skin
             </div>
             <div className="flex items-center gap-3">
               <span className="text-xs text-[hsl(var(--muted))]">Guaranteed secure checkout</span>
