@@ -4,6 +4,8 @@ import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { AddToCartButton } from "@/components/AddToCartButton";
 import Link from "next/link";
+import { getBaseUrl } from "@/lib/baseUrl";
+
 
 type Product = {
   id: string;
@@ -15,14 +17,17 @@ type Product = {
 };
 
 async function getProduct(slug: string): Promise<Product | null> {
+  const base = getBaseUrl();
+
   const res = await fetch(
-    `http://127.0.0.1:3000/api/catalog/product?slug=${encodeURIComponent(slug)}`,
+    `${base}/api/catalog/product?slug=${encodeURIComponent(slug)}`,
     { cache: "no-store" }
   );
 
   if (!res.ok) return null;
   return res.json();
 }
+
 
 export default async function ProductPage({
   params,
