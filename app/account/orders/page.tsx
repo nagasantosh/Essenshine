@@ -132,14 +132,18 @@ export default function MyOrdersPage() {
                         </div>
                       </div>
 
-                      <div className="flex items-center gap-2">
-                        <Badge variant={paid ? "default" : "secondary"}>
-                          {o.status}
-                        </Badge>
-                        {o.payment?.provider ? (
-                          <Badge variant="outline">{o.payment.provider}</Badge>
-                        ) : null}
-                      </div>
+<div className="flex items-center gap-2">
+  <Badge className={paid ? "bg-green-600 text-white" : "bg-zinc-200 text-zinc-700"}>
+    {o.status}
+  </Badge>
+
+  {o.payment?.provider ? (
+    <Badge className="border border-zinc-300">
+      {o.payment.provider}
+    </Badge>
+  ) : null}
+</div>
+
                     </CardContent>
                   </Card>
                 </Link>
