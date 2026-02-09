@@ -29,11 +29,11 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
               </span>
             </div>
             <div className="leading-tight">
-              <div className="text-[13px] sm:text-[15px] font-semibold tracking-[0.16em] sm:tracking-[0.18em] uppercase">
-                Herbal Bharat
+              <div className="text-[15px] font-semibold tracking-[0.18em] uppercase">
+                Essenshine
               </div>
-              <div className="text-[11px] sm:text-xs text-[hsl(var(--muted))]">
-                Premium Ayurveda • Hyderabad
+              <div className="text-xs text-[hsl(var(--muted))]">
+                Natural Herbal Products • Hyderabad
               </div>
             </div>
           </Link>
