@@ -1,7 +1,4 @@
 export function getBaseUrl() {
-  // In browser, relative is fine
-  if (typeof window !== "undefined") return "";
-
   // Vercel provides this automatically
   if (process.env.VERCEL_URL) return `https://${process.env.VERCEL_URL}`;
 
