@@ -33,7 +33,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
                 Essenshine
               </div>
               <div className="text-xs text-[hsl(var(--muted))]">
-                Natural Herbal Products • Hyderabad
+                Natural Herbal Products
               </div>
             </div>
           </Link>
