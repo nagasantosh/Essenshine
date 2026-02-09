@@ -1,0 +1,20 @@
+{
+  "products": {
+    "ashwagandha-powder": {
+      "title": "Ashwagandha Powder",
+      "slug": "ashwagandha-powder",
+      "description": "Premium Ayurvedic herb for vitality & calm.",
+      "ingredients": ["Ashwagandha root"],
+      "usage": "1 tsp daily with warm water or milk",
+      "active": true
+    },
+    "triphala-powder": {
+      "title": "Triphala Powder",
+      "slug": "triphala-powder",
+      "description": "Classic Ayurvedic blend for digestion support.",
+      "ingredients": ["Amla", "Haritaki", "Bibhitaki"],
+      "usage": "1 tsp before sleep with warm water",
+      "active": true
+    }
+  }
+}

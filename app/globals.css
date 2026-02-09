@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+/* Premium Ayurvedic Luxury Tokens */
+:root {
+  /* Surfaces */
+  --bg: 42 44% 96%;         /* warm parchment */
+  --surface: 0 0% 100%;
+  --surface-2: 42 55% 93%;  /* soft saffron wash */
+  --border: 28 22% 82%;
+
+  /* Text */
+  --text: 24 28% 10%;
+  --muted: 24 10% 38%;
+
+  /* Brand */
+  --brand: 145 34% 18%;     /* deep botanical green */
+  --gold: 42 85% 52%;       /* luxury gold */
+  --champagne: 42 38% 88%;  /* premium tint */
+}
+
+body {
+  background: hsl(var(--bg));
+  color: hsl(var(--text));
+}
