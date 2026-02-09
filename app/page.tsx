@@ -81,68 +81,75 @@ export default async function HomePage() {
           </div>
         </div>
 
-        {/* HERO */}
-        <section className="grid gap-8 lg:grid-cols-2 items-center">
-          {/* LEFT */}
-          <div className="space-y-6">
-            <div className="space-y-2">
-              <div className="text-[11px] tracking-[0.28em] uppercase text-[hsl(var(--muted))]">
-                Essenshine Natural Herbal Products
-              </div>
+{/* HERO */}
+<section className="grid gap-8 lg:grid-cols-2 items-center">
+  {/* RIGHT: Moving hero images (show FIRST on mobile) */}
+  <div className="order-1 lg:order-2">
+    <HeroCarousel items={heroItems} />
+  </div>
 
-              <h1 className="text-3xl sm:text-4xl md:text-6xl font-semibold tracking-tight leading-[1.06]">
-                Old-world herbal rituals,
-                <span className="text-[hsl(var(--gold))]"> refined</span> for modern care.
-              </h1>
+  {/* LEFT: Text (show SECOND on mobile) */}
+  <div className="order-2 lg:order-1 space-y-6">
+    <div className="space-y-2">
+      <div className="text-[11px] tracking-[0.28em] uppercase text-[hsl(var(--muted))]">
+        Essenshine Natural Herbal Products
+      </div>
 
+      <h1 className="text-3xl sm:text-4xl md:text-6xl font-semibold tracking-tight leading-[1.06]">
+        Old-world herbal rituals,
+        <span className="text-[hsl(var(--gold))]"> refined</span> for modern care.
+      </h1>
 
-              <GoldRule />
+      <GoldRule />
 
-              <p className="max-w-xl text-[15px] leading-7 text-[hsl(var(--muted))]">
-                Premium hair and skin essentials with clear usage guidance and safety notes—without medical claims.
-                Crafted for daily routines.
-              </p>
-            </div>
+      <p className="max-w-xl text-[15px] leading-7 text-[hsl(var(--muted))]">
+        Premium hair and skin essentials with clear usage guidance and safety notes—without medical claims.
+        Crafted for daily routines.
+      </p>
+    </div>
 
-            {/* CTA row */}
-            <div className="flex flex-col sm:flex-row gap-3">
-              <Button href="/shop" size="lg" className="w-full sm:w-auto">
-                Explore collection
-              </Button>
-              <Button href="/shop?category=hair-care" variant="secondary" size="lg" className="w-full sm:w-auto">
-                Shop Hair Care
-              </Button>
-            </div>
+    {/* CTA row */}
+    <div className="flex flex-col sm:flex-row gap-3">
+      <Button href="/shop" size="lg" className="w-full sm:w-auto">
+        Explore collection
+      </Button>
+      <Button
+        href="/shop?category=hair-care"
+        variant="secondary"
+        size="lg"
+        className="w-full sm:w-auto"
+      >
+        Shop Hair Care
+      </Button>
+    </div>
 
-            {/* Quick category chips */}
-            {categories.length > 0 && (
-              <div className="pt-3">
-                <div className="text-xs text-[hsl(var(--muted))] mb-2">Shop by category</div>
-                <div className="flex flex-wrap gap-2">
-                  <Link
-                    href="/shop"
-                    className="rounded-full border border-[hsl(var(--border))] bg-[hsl(var(--surface))] px-4 py-2 text-sm shadow-sm hover:bg-[hsl(var(--surface-2))] transition"
-                  >
-                    All Items
-                  </Link>
+    {/* Quick category chips */}
+    {categories.length > 0 && (
+      <div className="pt-3">
+        <div className="text-xs text-[hsl(var(--muted))] mb-2">Shop by category</div>
+        <div className="flex flex-wrap gap-2">
+          <Link
+            href="/shop"
+            className="rounded-full border border-[hsl(var(--border))] bg-[hsl(var(--surface))] px-4 py-2 text-sm shadow-sm hover:bg-[hsl(var(--surface-2))] transition"
+          >
+            All Items
+          </Link>
 
-                  {categories.slice(0, 6).map((c) => (
-                    <Link
-                      key={c.id}
-                      href={`/shop?category=${encodeURIComponent(c.id)}`}
-                      className="rounded-full border border-[hsl(var(--border))] bg-[hsl(var(--surface))] px-4 py-2 text-sm shadow-sm hover:bg-[hsl(var(--surface-2))] transition"
-                    >
-                      {c.name}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            )}
-          </div>
+          {categories.slice(0, 6).map((c) => (
+            <Link
+              key={c.id}
+              href={`/shop?category=${encodeURIComponent(c.id)}`}
+              className="rounded-full border border-[hsl(var(--border))] bg-[hsl(var(--surface))] px-4 py-2 text-sm shadow-sm hover:bg-[hsl(var(--surface-2))] transition"
+            >
+              {c.name}
+            </Link>
+          ))}
+        </div>
+      </div>
+    )}
+  </div>
+</section>
 
-          {/* RIGHT: Moving hero images */}
-          <HeroCarousel items={heroItems} />
-        </section>
 
         {/* DYNAMIC CATEGORIES */}
         <CategoryTiles categories={categories} />
