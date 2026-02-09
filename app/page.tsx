@@ -114,15 +114,6 @@ export default async function HomePage() {
               </Button>
             </div>
 
-
-            {/* Trust strip */}
-            <div className="flex flex-wrap gap-2 pt-2">
-              <Badge>Herbal</Badge>
-              <Badge>Secure checkout</Badge>
-              <Badge>Hyderabad</Badge>
-              <Badge>Traditional use</Badge>
-            </div>
-
             {/* Quick category chips */}
             {categories.length > 0 && (
               <div className="pt-3">
