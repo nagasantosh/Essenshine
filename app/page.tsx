@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/Badge";
 import CategoryTiles from "@/components/home/CategoryTiles";
 import { AddToCartButton } from "@/components/AddToCartButton";
 import HeroCarousel from "@/components/home/HeroCarousel";
+import { getBaseUrl } from "@/lib/baseUrl";
 
 type Product = {
   id: string;
@@ -28,14 +29,14 @@ function GoldRule() {
 }
 
 async function getProducts(): Promise<Product[]> {
-  const base = process.env.NEXT_PUBLIC_BASE_URL ?? "http://127.0.0.1:3000";
+  const base = getBaseUrl();
   const res = await fetch(`${base}/api/catalog/products`, { cache: "no-store" });
   if (!res.ok) return [];
   return res.json();
 }
 
 async function getCategories(): Promise<Category[]> {
-  const base = process.env.NEXT_PUBLIC_BASE_URL ?? "http://127.0.0.1:3000";
+  const base = getBaseUrl();
   const res = await fetch(`${base}/api/catalog/categories`, { cache: "no-store" });
   if (!res.ok) return [];
   return res.json();
