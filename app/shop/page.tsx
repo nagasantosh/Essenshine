@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/Button";
 import { AddToCartButton } from "@/components/AddToCartButton";
 import { getBaseUrl } from "@/lib/baseUrl";
 
-
+console.log("BASE URL (shop):", getBaseUrl());
 type Category = { id: string; name: string };
 type Product = {
   id: string;
