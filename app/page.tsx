@@ -90,10 +90,11 @@ export default async function HomePage() {
                 Essenshine Natural Herbal Products
               </div>
 
-              <h1 className="text-4xl md:text-6xl font-semibold tracking-tight leading-[1.02]">
+              <h1 className="text-3xl sm:text-4xl md:text-6xl font-semibold tracking-tight leading-[1.06]">
                 Old-world herbal rituals,
                 <span className="text-[hsl(var(--gold))]"> refined</span> for modern care.
               </h1>
+
 
               <GoldRule />
 
@@ -104,14 +105,15 @@ export default async function HomePage() {
             </div>
 
             {/* CTA row */}
-            <div className="flex flex-wrap gap-3">
-              <Button href="/shop" size="lg">
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Button href="/shop" size="lg" className="w-full sm:w-auto">
                 Explore collection
               </Button>
-              <Button href="/shop?category=hair-care" variant="secondary" size="lg">
+              <Button href="/shop?category=hair-care" variant="secondary" size="lg" className="w-full sm:w-auto">
                 Shop Hair Care
               </Button>
             </div>
+
 
             {/* Trust strip */}
             <div className="flex flex-wrap gap-2 pt-2">
