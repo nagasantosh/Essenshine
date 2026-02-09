@@ -4,6 +4,8 @@ import { Card, CardContent } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { AddToCartButton } from "@/components/AddToCartButton";
+import { getBaseUrl } from "@/lib/baseUrl";
+
 
 type Category = { id: string; name: string };
 type Product = {
