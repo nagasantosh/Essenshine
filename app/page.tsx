@@ -92,7 +92,7 @@ export default async function HomePage() {
       </div>
 
       <h1 className="text-3xl sm:text-4xl md:text-6xl font-semibold tracking-tight leading-[1.06]">
-        Old-world herbal rituals,
+        Natural Herbal Products,
         <span className="text-[hsl(var(--gold))]"> refined</span> for modern care.
       </h1>
 
