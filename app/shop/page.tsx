@@ -21,25 +21,30 @@ function GoldRule() {
 }
 
 async function getCategories(): Promise<Category[]> {
-  const res = await fetch("http://127.0.0.1:3000/api/catalog/categories", {
+  const base = getBaseUrl();
+
+  const res = await fetch(`${base}/api/catalog/categories`, {
     cache: "no-store",
   });
+
   if (!res.ok) return [];
   return res.json();
 }
 
 async function getProducts(categoryId: string): Promise<Product[]> {
+  const base = getBaseUrl();
+
   const url =
     categoryId && categoryId !== "all"
-      ? `http://127.0.0.1:3000/api/catalog/products?category=${encodeURIComponent(
-          categoryId
-        )}`
-      : "http://127.0.0.1:3000/api/catalog/products";
+      ? `${base}/api/catalog/products?category=${encodeURIComponent(categoryId)}`
+      : `${base}/api/catalog/products`;
 
   const res = await fetch(url, { cache: "no-store" });
+
   if (!res.ok) return [];
   return res.json();
 }
+
 
 export default async function ShopPage({
   searchParams,
