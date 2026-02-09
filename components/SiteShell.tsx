@@ -25,7 +25,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
           <Link href="/" className="flex items-center gap-3 sm:gap-4">
             <div className="h-10 w-10 sm:h-11 sm:w-11 rounded-2xl border border-[hsl(var(--border))] bg-[hsl(var(--surface))] grid place-items-center shadow-sm">
               <span className="text-xs sm:text-sm tracking-[0.22em] text-[hsl(var(--brand))] font-semibold">
-                HB
+                ES
               </span>
             </div>
             <div className="leading-tight">
