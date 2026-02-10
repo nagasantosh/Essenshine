@@ -63,19 +63,6 @@ export default async function HomePage() {
     <SiteShell>
       <div className="space-y-16">
         {/* ANNOUNCEMENT STRIP */}
-        <div className="rounded-2xl border border-[hsl(var(--border))] bg-[hsl(var(--surface))] px-5 py-3">
-          <div className="flex flex-wrap items-center justify-between gap-3 text-sm">
-            <div className="text-[hsl(var(--muted))]">
-              Premium herbal rituals for hair & skin
-            </div>
-            <div className="flex items-center gap-3">
-              <span className="text-xs text-[hsl(var(--muted))]">Guaranteed secure checkout</span>
-              <Link href="/shop" className="text-sm hover:underline underline-offset-4">
-                Shop now →
-              </Link>
-            </div>
-          </div>
-        </div>
 
 {/* HERO */}
 <section className="grid gap-8 lg:grid-cols-2 items-center">
